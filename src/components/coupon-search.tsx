@@ -13,7 +13,26 @@ export default function CouponSearch() {
 
   const currentDate = new Date()
 
-  const filteredCoupons = coupons
+  // Add deduplication function
+  const deduplicateCoupons = (coupons: typeof import("@/lib/coupons").coupons) => {
+    const seen = new Set<string>()
+    return coupons.filter((coupon) => {
+      // Create a unique key combining URL and Location
+      const key = `${coupon.URL}-${coupon.Location}`
+      if (seen.has(key)) {
+        return false
+      }
+      seen.add(key)
+      return true
+    })
+  }
+
+  // Add location cleanup function
+  const cleanLocation = (location: string) => {
+    return location.replace(/only at participating /i, '')
+  }
+
+  const filteredCoupons = deduplicateCoupons(coupons)
     .filter((coupon) => {
       const expiryDate = new Date(coupon.Expires)
       return expiryDate > currentDate
@@ -73,7 +92,7 @@ export default function CouponSearch() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="pb-4">
-                <p className="font-medium text-gray-700 mb-2">{coupon.Location}</p>
+                <p className="font-medium text-gray-700 mb-2">{cleanLocation(coupon.Location)}</p>
                 <p className="text-sm text-muted-foreground">
                   Valid until {new Date(coupon.Expires).toLocaleDateString()}
                 </p>
