@@ -42,6 +42,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script
           data-name="BMC-Widget"
           data-cfasync="false"
@@ -53,7 +54,6 @@ export default function RootLayout({
           data-position="Right"
           data-x_margin="18"
           data-y_margin="18"
-          async
         ></script>
       </body>
     </html>
