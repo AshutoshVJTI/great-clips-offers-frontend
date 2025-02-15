@@ -10,6 +10,18 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { coupons } from "@/lib/coupons"
 
+interface Coupon {
+  URL: string;
+  Location: string | null;
+  Price: string | null;
+  Expires: string;
+}
+
+type CouponsArray = Array<{
+  US: Coupon[];
+  CA: Coupon[];
+}>
+
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -28,14 +40,14 @@ const item = {
 export default function CouponSearch() {
   const { theme, setTheme } = useTheme()
   const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCountry, setSelectedCountry] = useState<"US" | "CA">("US")
 
   const currentDate = new Date()
 
-  // Add deduplication function
-  const deduplicateCoupons = (coupons: typeof import("@/lib/coupons").coupons) => {
+  // Update deduplication function to handle the new structure
+  const deduplicateCoupons = (coupons: CouponsArray) => {
     const seen = new Set<string>()
-    return coupons.filter((coupon) => {
-      // Create a unique key combining URL and Location
+    return coupons[0][selectedCountry].filter((coupon: Coupon) => {
       const key = `${coupon.URL}-${coupon.Location}`
       if (seen.has(key)) {
         return false
@@ -45,49 +57,81 @@ export default function CouponSearch() {
     })
   }
 
-  // Add location cleanup function
-  const cleanLocation = (location: string) => {
-    return location.replace(/only at participating /i, '')
+  // Location cleanup function remains the same
+  const cleanLocation = (location: string | null) => {
+    return location?.replace(/only at participating /i, '') || 'Location not specified'
   }
 
   const filteredCoupons = deduplicateCoupons(coupons)
-    .filter((coupon) => {
+    .filter((coupon: Coupon) => {
       const expiryDate = new Date(coupon.Expires)
       return expiryDate > currentDate
     })
-    .filter((coupon) => coupon.Location.toLowerCase().includes(searchTerm.toLowerCase()))
+    .filter((coupon: Coupon) => 
+      coupon.Location?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false
+    )
+
+  // First, let's update the header section with the new toggle styling
+  const headerSection = (
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <motion.div 
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="flex items-center gap-2"
+          >
+            <Scissors className="h-6 w-6 text-primary" />
+            <h1 className="text-xl font-bold text-primary">No BS Coupons</h1>
+          </motion.div>
+          
+          <div className="flex items-center gap-4">
+            <div className="bg-secondary/50 p-1 rounded-lg">
+              <Button
+                variant={selectedCountry === "US" ? "default" : "ghost"}
+                onClick={() => setSelectedCountry("US")}
+                size="lg"
+                className={`px-6 ${
+                  selectedCountry === "US" 
+                    ? "bg-primary text-primary-foreground shadow-md" 
+                    : "hover:bg-background/50 text-muted-foreground"
+                }`}
+              >
+                🇺🇸 United States
+              </Button>
+              <Button
+                variant={selectedCountry === "CA" ? "default" : "ghost"}
+                onClick={() => setSelectedCountry("CA")}
+                size="lg"
+                className={`px-6 ${
+                  selectedCountry === "CA" 
+                    ? "bg-primary text-primary-foreground shadow-md" 
+                    : "hover:bg-background/50 text-muted-foreground"
+                }`}
+              >
+                🇨🇦 Canada
+              </Button>
+            </div>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="rounded-full"
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <motion.div 
-              initial={{ x: -20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              className="flex items-center gap-2"
-            >
-              <Scissors className="h-6 w-6 text-primary" />
-              <h1 className="text-xl font-bold text-primary">No BS Coupons</h1>
-            </motion.div>
-            <div className="flex items-center gap-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="rounded-full"
-              >
-                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                <span className="sr-only">Toggle theme</span>
-              </Button>
-              <Badge variant="secondary" className="text-xs rounded-full px-3">
-                Great Clips Deals
-              </Badge>
-            </div>
-          </div>
-        </div>
-      </header>
+      {headerSection}
 
       <div className="bg-primary/5 dark:bg-primary/10">
         <motion.div 
@@ -132,7 +176,7 @@ export default function CouponSearch() {
           animate="show"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {filteredCoupons.map((coupon, index) => (
+          {filteredCoupons.map((coupon: Coupon, index: number) => (
             <motion.div key={index} variants={item}>
               <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <CardHeader className="pb-4">
