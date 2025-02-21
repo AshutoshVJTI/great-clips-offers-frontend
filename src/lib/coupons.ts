@@ -2,94 +2,34 @@ export const coupons = [
     {
         "US": [
             {
+                "URL": "https://offers.greatclips.com/Dtop7ic",
+                "Location": "only at participating Tucson",
+                "Price": "$8.99",
+                "Expires": "03/21/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/g6yk5Wi",
+                "Location": "only at participating Indianapolis",
+                "Price": "$9.99",
+                "Expires": "03/07/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/UA6jvvY",
+                "Location": "only at participating Salt Lake City",
+                "Price": "$11.99",
+                "Expires": "03/07/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/A4dU2Ri",
+                "Location": "Park Central Plaza at 5960 Losee Rd in North Las Vegas, NV",
+                "Price": "$12.99",
+                "Expires": "02/26/2025"
+            },
+            {
                 "URL": "https://offers.greatclips.com/fOIOJ1Q",
-                "Location": "Great Clips Whitestone Market at 2800 E Whitestone Blvd in Cedar Park, TX",
+                "Location": "Whitestone Market at 2800 E Whitestone Blvd in Cedar Park, TX",
                 "Price": "$5.99",
                 "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/fVOFq5m",
-                "Location": "only at participating Milwaukee",
-                "Price": "$9.99",
-                "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/fFu5szV",
-                "Location": "only at participating Quincy-Hannibal-Keokuk",
-                "Price": "$9.99",
-                "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/683VCAF",
-                "Location": "only at participating Charlottesville",
-                "Price": "$11.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/NGtujYs",
-                "Location": "only at participating Erie",
-                "Price": "$9.99",
-                "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/JezCZxt",
-                "Location": "only at participating Buffalo",
-                "Price": "$12.99",
-                "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/TMNOWQV",
-                "Location": "only at participating Washington D.C.",
-                "Price": "$14.99",
-                "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/Bmrh7AD",
-                "Location": "only at participating NY, NJ, & Fairfield County, CT",
-                "Price": "$9.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/fKZQHpI",
-                "Location": "only at participating Burlington-Plattsburgh",
-                "Price": "$9.99",
-                "Expires": "03/14/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/n1vORAG",
-                "Location": "only at participating Springfield-Holyoke",
-                "Price": "$8.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/AlrdvFt",
-                "Location": "only at participating Altoona, DuBois & State College",
-                "Price": "$9.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/elTsUXR",
-                "Location": "only at participating Richmond",
-                "Price": "$10.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/SXmdUkw",
-                "Location": "only at participating Norfolk-Portsmith-Newpt Nws",
-                "Price": "$9.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/fWiQUIj",
-                "Location": "only at participating Rochester, NY",
-                "Price": "$12.99",
-                "Expires": "03/07/2025"
-            },
-            {
-                "URL": "https://offers.greatclips.com/faWvv0Y",
-                "Location": "Great Clips River Crossings Marketplace at 4861 Bechelli Lane in Redding, CA",
-                "Price": "$11.99",
-                "Expires": "02/28/2025"
             },
             {
                 "URL": "https://offers.greatclips.com/v3U0YsK",
@@ -99,7 +39,7 @@ export const coupons = [
             },
             {
                 "URL": "https://offers.greatclips.com/KvMPPl7",
-                "Location": "Great Clips Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
+                "Location": "Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
                 "Price": "$7.99",
                 "Expires": "02/28/2025"
             },
@@ -132,9 +72,33 @@ export const coupons = [
                 "Location": "only at participating Victoria",
                 "Price": "$8.99",
                 "Expires": "03/07/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/faWvv0Y",
+                "Location": "River Crossings Marketplace at 4861 Bechelli Lane in Redding",
+                "Price": "$11.99",
+                "Expires": "02/28/2025"
             }
         ],
         "CA": [
+            {
+                "URL": "https://offers.greatclips.com/uCSY853",
+                "Location": "only at participating K/W, Brantford & Guelph",
+                "Price": "$14.99",
+                "Expires": "03/16/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/l4QNCzL",
+                "Location": "only at participating Barrie, Orillia, Bradford, Innisfil & Alliston",
+                "Price": "$14.99",
+                "Expires": "03/16/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/zsCu8q5",
+                "Location": "only at participating Greater Toronto and surrounding",
+                "Price": "$14.99",
+                "Expires": "03/16/2025"
+            },
             {
                 "URL": "https://offers.greatclips.com/PK2ZCZW",
                 "Location": "only at participating Calgary-Lethbridge-Airdrie-Okotoks-Cochrane",
@@ -164,7 +128,7 @@ export const coupons = [
                 "Location": "only at participating Lower Mnlnd & Van",
                 "Price": "$14.99",
                 "Expires": "03/07/2025"
-            },
+            }
         ]
     }
 ]
