@@ -2,6 +2,48 @@ export const coupons = [
     {
         "US": [
             {
+                "URL": "https://offers.greatclips.com/zETS0tW",
+                "Location": "Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
+                "Price": "$7.99",
+                "Expires": "03/28/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/Dtop7ic",
+                "Location": "only at participating Tucson",
+                "Price": "$8.99",
+                "Expires": "03/21/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/wjOFHYM",
+                "Location": "only at participating Greater Birmingham & Central Alabama",
+                "Price": "$7.99",
+                "Expires": "03/21/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/kbI29Fn",
+                "Location": "only at participating Raleigh-Durham, Fayetteville",
+                "Price": "$9.99",
+                "Expires": "03/21/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/HkQ7tUf",
+                "Location": "only at participating Charleston",
+                "Price": "$10.99",
+                "Expires": "03/21/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/GmZiBuf",
+                "Location": "only at participating San Diego",
+                "Price": "$14.99",
+                "Expires": "03/28/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/fOIOJ1Q",
+                "Location": "Whitestone Market at 2800 E Whitestone Blvd in Cedar Park, TX",
+                "Price": "$5.99",
+                "Expires": "03/14/2025"
+            },
+            {
                 "URL": "https://offers.greatclips.com/5p0CVpi",
                 "Location": "Park Central Plaza at 5960 Losee Rd in North Las Vegas, NV",
                 "Price": "$12.99",
@@ -129,6 +171,24 @@ export const coupons = [
             }
         ],
         "CA": [
+            {
+                "URL": "https://offers.greatclips.com/uCSY853",
+                "Location": "only at participating K/W, Brantford & Guelph",
+                "Price": "$14.99",
+                "Expires": "03/16/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/l4QNCzL",
+                "Location": "only at participating Barrie, Orillia, Bradford, Innisfil & Alliston",
+                "Price": "$14.99",
+                "Expires": "03/16/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/zsCu8q5",
+                "Location": "only at participating Greater Toronto and surrounding",
+                "Price": "$14.99",
+                "Expires": "03/16/2025"
+            },
             {
                 "URL": "https://offers.greatclips.com/uCSY853",
                 "Location": "only at participating K/W, Brantford & Guelph",
