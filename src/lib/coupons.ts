@@ -2,6 +2,36 @@ export const coupons = [
     {
         "US": [
             {
+                "URL": "https://offers.greatclips.com/u1lga9c",
+                "Location": "Great Clips Park Central Plaza at 5960 Losee Rd in North Las Vegas, NV",
+                "Price": "$10.99",
+                "Expires": "03/18/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/3TI6nkW",
+                "Location": "only at participating Southern Oregon",
+                "Price": "$11.99",
+                "Expires": "04/11/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/zETS0tW",
+                "Location": "Great Clips Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
+                "Price": "$7.99",
+                "Expires": "03/28/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/Dtop7ic",
+                "Location": "only at participating Tucson",
+                "Price": "$8.99",
+                "Expires": "03/21/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/GmZiBuf",
+                "Location": "only at participating San Diego",
+                "Price": "$14.99",
+                "Expires": "03/28/2025"
+            },
+            {
                 "URL": "https://offers.greatclips.com/zETS0tW",
                 "Location": "Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
                 "Price": "$7.99",
