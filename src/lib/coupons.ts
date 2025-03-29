@@ -2,6 +2,42 @@ export const coupons = [
     {
         "US": [
             {
+                "URL": "https://offers.greatclips.com/Xo4ZB5V",
+                "Location": "only at participating Houston",
+                "Price": "$9.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/yVE9xgR",
+                "Location": "only at participating Upper Rio Grande Valley",
+                "Price": "$8.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/s7kMHYN",
+                "Location": "only at participating Dallas-Ft. Worth",
+                "Price": "$9.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/3TI6nkW",
+                "Location": "only at participating Southern Oregon",
+                "Price": "$11.99",
+                "Expires": "04/11/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/vmpivQj",
+                "Location": "only at participating New Mexico",
+                "Price": "$7.99",
+                "Expires": "04/18/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/jXLcGK6",
+                "Location": "only at participating Chico, Redding & Oroville",
+                "Price": "$12.99",
+                "Expires": "04/18/2025"
+            },
+            {
                 "URL": "https://offers.greatclips.com/3TI6nkW",
                 "Location": "only at participating Southern Oregon",
                 "Price": "$11.99",
@@ -24,7 +60,7 @@ export const coupons = [
                 "Location": "Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
                 "Price": "$7.99",
                 "Expires": "03/28/2025"
-            }, 
+            },
             {
                 "URL": "https://offers.greatclips.com/u1lga9c",
                 "Location": "Great Clips Park Central Plaza at 5960 Losee Rd in North Las Vegas, NV",
