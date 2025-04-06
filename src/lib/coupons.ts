@@ -2,6 +2,66 @@ export const coupons = [
     {
         "US": [
             {
+                "URL": "https://offers.greatclips.com/UrPthgH",
+                "Location": "only at participating US",
+                "Price": "$5",
+                "Expires": "N/A"
+            },
+            {
+                "URL": "https://offers.greatclips.com/aTb5dtb",
+                "Location": "Great Clips Joshua Tree Plaza at 1018 Nevada Way in Boulder City, NV",
+                "Price": "$9.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/7acRvRo",
+                "Location": "Great Clips Rainbow Springs at 3675 S Rainbow Blvd in Las Vegas, NV",
+                "Price": "$10.99",
+                "Expires": "04/10/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/Gy3jOq4",
+                "Location": "Great Clips Park Central Plaza at 5960 Losee Rd in North Las Vegas, NV",
+                "Price": "$10.99",
+                "Expires": "04/10/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/XqRKUR4",
+                "Location": "Great Clips Whitestone Market at 2800 E Whitestone Blvd in Cedar Park, TX",
+                "Price": "$7.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/Xo4ZB5V",
+                "Location": "only at participating Houston",
+                "Price": "$9.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/yVE9xgR",
+                "Location": "only at participating Upper Rio Grande Valley",
+                "Price": "$8.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/s7kMHYN",
+                "Location": "only at participating Dallas-Ft. Worth",
+                "Price": "$9.99",
+                "Expires": "04/25/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/vmpivQj",
+                "Location": "only at participating New Mexico",
+                "Price": "$7.99",
+                "Expires": "04/18/2025"
+            },
+            {
+                "URL": "https://offers.greatclips.com/jXLcGK6",
+                "Location": "only at participating Chico, Redding & Oroville",
+                "Price": "$12.99",
+                "Expires": "04/18/2025"
+            },
+            {
                 "URL": "https://offers.greatclips.com/Xo4ZB5V",
                 "Location": "only at participating Houston",
                 "Price": "$9.99",
